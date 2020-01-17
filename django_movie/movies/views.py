@@ -2,6 +2,10 @@ from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
 from django.views.generic.base import View
 
+from django.contrib.auth import authenticate, login
+from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponseRedirect
+
 from .models import Movie
 from .forms import ReviewForm
 
